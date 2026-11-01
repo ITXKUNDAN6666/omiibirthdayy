@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omii के लिए ❤️ | I Love You</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@500;600;700&display=swap');
+:root{--pink:#ff4d83;--rose:#ff9ab8;--bg:#09060b;--muted:#d9c5cf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% 0%,#3a1022 0,transparent 38%),radial-gradient(ellipse at 90% 55%,#260d1c 0,transparent 35%),var(--bg);color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;background:linear-gradient(#09060be8,transparent);backdrop-filter:blur(5px)}
+.brand{font:700 1.55rem 'Dancing Script',cursive;color:#ffb5cc}
+.links{display:flex;gap:20px;font-size:.82rem}.links a{color:#f5dce5;text-decoration:none}.links a:hover{color:var(--rose)}
+.music{background:#200d17;border:1px solid #773149;border-radius:30px;color:#ffdbe6;padding:9px 12px}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 22px 70px;position:relative;isolation:isolate;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(0deg,#09060b 0%,#09060b55 55%,#09060b66),url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=2000&q=85') center/cover;opacity:.65}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse,transparent 10%,#09060b66 90%)}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;color:#ffc0d2;font-size:.72rem}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600}
+.hero h1{font-size:clamp(3rem,8vw,7rem);line-height:1.02;margin:18px 0;text-shadow:0 0 35px #ff4f8355}
+.script{font:clamp(2.2rem,5vw,4.5rem) 'Dancing Script',cursive;color:#ff88ac;display:block;margin-top:10px}
+.hero p{color:#f3dce5;max-width:560px;line-height:1.8;margin:22px auto 28px}
+.btn{border:0;border-radius:999px;padding:14px 23px;color:white;background:linear-gradient(110deg,#ff386f,#ff719b);box-shadow:0 8px 30px #ff386f40;transition:.25s;font-weight:700}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 36px #ff386f70}
+.btn.alt{background:#1b0c15;border:1px solid #8b3855;box-shadow:none}
+.section{padding:85px 6vw;max-width:1250px;margin:auto;scroll-margin-top:70px}
+.head{text-align:center;margin-bottom:34px}.head h2{font-size:clamp(2rem,4vw,3.2rem);margin:10px 0}.head p{color:var(--muted);line-height:1.7}
+.panel{background:linear-gradient(145deg,#301424d1,#0f0916e8);border:1px solid #74314a80;border-radius:25px;padding:clamp(22px,4vw,42px);box-shadow:0 20px 70px #0005}
+.namecard{max-width:680px;margin:auto;text-align:center}
+.inputrow{display:flex;gap:10px;margin:24px auto 0;max-width:500px}
+input{min-width:0;flex:1;background:#0e080d;border:1px solid #783149;border-radius:999px;padding:14px 18px;color:white;outline:none}
+input:focus{border-color:#ff83a9}
+.output{min-height:65px;margin:22px auto 0;color:#ffc1d4;font:2rem 'Dancing Script',cursive}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.memory{padding:0;overflow:hidden;position:relative;border-radius:17px;border:1px solid #73344b;background:#160b12;min-height:190px;text-align:left;color:white;transition:.25s}
+.memory:hover{transform:translateY(-5px);border-color:#ff83a9}
+.memory img{width:100%;height:220px;object-fit:cover;display:block;opacity:.88;transition:.4s}
+.memory:hover img{transform:scale(1.05);opacity:1}
+.memory span{display:block;padding:12px;font-size:.9rem}
+.hearts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.heartbtn{background:linear-gradient(145deg,#341326,#160a13);border:1px solid #703047;border-radius:18px;padding:22px 10px;color:#fff;min-height:145px;transition:.25s}
+.heartbtn:hover{transform:translateY(-5px);box-shadow:0 10px 35px #ff386f25}
+.hearticon{display:block;font-size:2.7rem;filter:drop-shadow(0 0 12px #ff386f99);animation:pulse 1.8s infinite}
+.heartbtn small{display:block;margin-top:9px;color:#f4cbd8}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.reasons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.reason{background:#ffffff08;border:1px solid #74314a70;border-radius:16px;padding:23px;text-align:center}
+.reason b{display:block;margin:8px 0;color:#ffb5cc}.reason p{color:#d9c5cf;font-size:.9rem;line-height:1.6;margin-bottom:0}
+.letter{max-width:800px;margin:auto;background:linear-gradient(130deg,#f9dfc4,#dba985);color:#512b2a;padding:clamp(24px,5vw,50px);border-radius:5px;box-shadow:0 20px 70px #0007;transform:rotate(-.5deg)}
+.letter h2{font:2.2rem 'Dancing Script',cursive;margin-top:0}.letter p{font:1.2rem/1.9 'Dancing Script',cursive}
+.biglove{font:clamp(3rem,9vw,8rem) 'Dancing Script',cursive;color:#ff9fba;text-shadow:0 0 25px #ff2c72,0 0 65px #ff2c7266;text-align:center;line-height:1.1;padding:18px 0;animation:loveGlow 2s ease-in-out infinite alternate}
+footer{text-align:center;padding:40px 20px;color:#c9a7b6;font-size:.85rem}
+#rain{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+.fall{position:absolute;top:-40px;animation:fall linear forwards;opacity:.85;filter:drop-shadow(0 0 7px #ff326c)}
+@keyframes fall{to{transform:translateY(110vh) rotate(380deg);opacity:0}}
+.modal{position:fixed;inset:0;background:#050207dd;z-index:50;display:none;place-items:center;padding:20px;backdrop-filter:blur(8px)}
+.modal.show{display:grid}.modalbox{max-width:520px;width:100%;text-align:center;padding:35px 25px;background:linear-gradient(145deg,#351226,#100911);border:1px solid #a84466;border-radius:25px;box-shadow:0 0 70px #ff386f25}
+.modalbox .big{font-size:3.3rem}.modalbox h2{font-size:2rem;color:#ffabc4}.modalbox p{color:#f3dce5;line-height:1.8}
+#secret{display:none}.divider{height:1px;background:linear-gradient(90deg,transparent,#a94a6b,transparent);margin:25px 0}
+@keyframes loveGlow{from{transform:scale(1);text-shadow:0 0 25px #ff2c72}to{transform:scale(1.04);text-shadow:0 0 35px #ff2c72,0 0 90px #ff2c7288}}
+@media(max-width:800px){.links{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hearts{grid-template-columns:repeat(2,minmax(0,1fr))}.reasons{grid-template-columns:1fr 1fr}.memory img{height:190px}}
+@media(max-width:450px){.section{padding:65px 18px}.inputrow{flex-direction:column}.inputrow .btn{width:100%}.reasons{grid-template-columns:1fr}.memory img{height:160px}.heartbtn{min-height:130px}}
+</style>
+</head>
+<body>
+<div id="rain"></div>
+<nav>
+  <div class="brand">For My Omii ♡</div>
+  <div class="links"><a href="#home">Home</a><a href="#memories">Memories</a><a href="#surprise">Surprise</a><a href="#letter">Letter</a></div>
+  <button class="music" id="musicBtn" onclick="toggleMusic()">♫ Music: Off</button>
+</nav>
+
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">A little world made just for you</div>
+    <h1>Happy Birthday<span class="script" id="heroName">Omii ❤️</span></h1>
+    <p>मेरी ज़िंदगी की सबसे प्यारी इंसान के लिए। तुम्हारी मुस्कान मेरे दिन को खूबसूरत बना देती है। आज की सारी खुशियाँ और ये छोटी-सी दुनिया सिर्फ़ तुम्हारे नाम है।</p>
+    <button class="btn" onclick="document.querySelector('#welcome').scrollIntoView({behavior:'smooth'})">Open Your Surprise ♥</button>
+    <div class="tiny">Made with all my heart · 8 November ❤️</div>
+  </div>
+</section>
+
+<section class="section" id="welcome">
+  <div class="head"><div class="eyebrow"></div><h2>मेरी प्यारी Omii ❤️</h2><p>तुम्हारे लिए एक संदेश छिपा है… इसे खोलो।</p></div>
+  <div class="panel namecard">
+    <div class="inputrow"><input id="herName" placeholder="अपना प्यारा-सा नाम लिखो..." maxlength="35" value="Omii"><button class="btn" onclick="revealName()">खोलो ❤️</button></div>
+    <div class="output" id="nameOutput">एक प्यारा-सा सरप्राइज़ तुम्हारा इंतज़ार कर रहा है…</div>
+  </div>
+</section>
+
+<section class="section" id="memories">
+  <div class="head"><div class="eyebrow">छोटी-छोटी यादें, ढेर सारा प्यार</div><h2>हमारी खूबसूरत यादें ❤️</h2><p>किसी भी तस्वीर पर क्लिक करो।</p></div>
+  <div class="grid" id="gallery">
+    <button class="memory" onclick="openPhoto(this)"><img src="./photoes/photo1.jpg.jpeg" alt="Omii"><span>तुम्हारी मुस्कान मेरे लिए सब कुछ है 🌸</span></button>
+    <button class="memory" onclick="openPhoto(this)"><img src="./photoes/photo2.jpg.jpeg" alt="Omii"><span>तुम्हारी आँखें मेरे लिए सब कुछ है 🌟</span></button>
+    <button class="memory" onclick="openPhoto(this)"><img src="./photoes/photo3.jpg.jpeg" alt="Omii"><span>तुम्हारी धड़ी मेरे लिए सब कुछ है 🕊️</span></button>
+    <button class="memory" onclick="openPhoto(this)"><img src="./photoes/photo4.jpg.jpeg" alt="Omii"><span>तुम्हारी बातें मेरे लिए सब कुछ है 💌</span></button>
+
+  </div>
+</section>
+
+<section class="section" id="surprise">
+  <div class="head"><div class="eyebrow">मेरी जान, कोई एक दिल चुनो</div><h2>तुम्हारे लिए आठ सरप्राइज़ ❤️</h2><p>हर दिल में मेरे प्यार का एक छोटा-सा हिस्सा छिपा है। एक-एक करके खोलना।</p></div>
+  <div class="hearts">
+    <button class="heartbtn" onclick="showSurprise(0)"><span class="hearticon">💗</span><small>एक प्यारा संदेश</small></button>
+    <button class="heartbtn" onclick="showSurprise(1)"><span class="hearticon">💖</span><small>एक वादा</small></button>
+    <button class="heartbtn" onclick="showSurprise(2)"><span class="hearticon">💕</span><small>एक याद</small></button>
+    <button class="heartbtn" onclick="showSurprise(3)"><span class="hearticon">💘</span><small>एक राज़</small></button>
+    <button class="heartbtn" onclick="showSurprise(4)"><span class="hearticon">💝</span><small>एक दुआ</small></button>
+    <button class="heartbtn" onclick="showSurprise(5)"><span class="hearticon">❤️</span><small>मेरे दिल की बात</small></button>
+    <button class="heartbtn" onclick="showSurprise(6)"><span class="hearticon">💞</span><small>एक और बात</small></button>
+    <button class="heartbtn" onclick="showSurprise(7)"><span class="hearticon">💓</span><small>आख़िरी सरप्राइज़</small></button>
+  </div>
+</section>
+
+<section class="section">
+  <div class="head"><div class="eyebrow">तुमसे प्यार करने की लाखों वजहों में से कुछ</div><h2>मैं तुमसे प्यार क्यों करता हूँ ❤️</h2></div>
+  <div class="reasons">
+    <div class="reason"><span>😊</span><b>तुम्हारी मुस्कान</b><p>तुम्हारी एक मुस्कान मेरा सबसे मुश्किल दिन भी अच्छा बना देती है।</p></div>
+    <div class="reason"><span>🫶</span><b>तुम्हारा प्यारा दिल</b><p>तुम्हारी अच्छाई और अपनापन मुझे बहुत प्यारा लगता है।</p></div>
+    <div class="reason"><span>🌙</span><b>तुम्हारा साथ</b><p>तुम साथ होती हो तो दुनिया थोड़ी और खूबसूरत लगती है।</p></div>
+    <div class="reason"><span>✨</span><b>तुम्हारी छोटी-छोटी बातें</b><p>तुम्हारी हर छोटी आदत मेरे लिए बहुत मायने रखती है।</p></div>
+    <div class="reason"><span>🥹</span><b>तुम्हारी हँसी</b><p>तुम्हारी हँसी बार-बार सुनने का मन करता है।</p></div>
+    <div class="reason"><span>❤️</span><b>बस तुम</b><p>कोई बड़ी वजह नहीं चाहिए। मैं तुमसे प्यार करता हूँ, क्योंकि तुम तुम हो।</p></div>
+  </div>
+</section>
+
+<section class="section" id="letter">
+  <div class="head"><div class="eyebrow">जब भी तुम्हें मेरा प्यार याद करना हो</div><h2>मेरी Omii के नाम एक ख़त 💌</h2></div>
+  <div class="letter">
+    <h2>मेरी प्यारी Omii, ❤️</h2>
+    <p>आज तुम्हारे जन्मदिन पर मैं बस तुम्हें ये बताना चाहता हूँ कि तुम मेरे लिए कितनी खास हो। तुम्हारी वजह से मेरी ज़िंदगी में ऐसी खुशी आई है, जिसे शब्दों में पूरी तरह समझा पाना मुश्किल है।</p>
+    <p>मेरी दुआ है कि तुम्हारी ज़िंदगी का ये नया साल खुशियों, सुकून, प्यारी मुस्कुराहटों और तुम्हारे हर सपने की शुरुआत लेकर आए। तुम सिर्फ़ आज नहीं, हर दिन बहुत खास हो। कभी खुद को कम मत समझना।</p>
+    <p>मेरी ज़िंदगी में होने के लिए शुक्रिया। काश तुम एक पल के लिए खुद को मेरी नज़रों से देख पातीं, तो तुम्हें पता चलता कि तुम कितनी प्यारी, कितनी अनमोल और कितनी खूबसूरत इंसान हो।</p>
+    <p>जन्मदिन मुबारक, मेरी सबसे प्यारी Omii। मेरी ख्वाहिश है कि तुम्हारी मुस्कान की वजहों में मेरा नाम भी हमेशा शामिल रहे। ❤️</p>
+    <p>हमेशा तुम्हारा साथ देने वाला,<br><span id="letterName" style="font-size:1.7rem">तुम्हारा Kundan ❤️</span></p>
+  </div>
+</section>
+
+<section class="section" id="final">
+  <div class="panel" style="text-align:center">
+    <div class="eyebrow">बस एक आख़िरी बात…</div>
+    <div class="biglove">I LOVE YOU<br>MY WIFE OMII ❤️</div>
+    <p style="color:#e9cbd7;line-height:1.8">शब्दों से भी ज़्यादा प्यार करता हूँ तुमसे। आज, कल और ज़िंदगी के हर छोटे-बड़े पल में। मेरी Omii, तुम मेरे दिल के बहुत करीब हो। ❤️</p>
+    <button class="btn" onclick="finalSurprise()">दिलों की बारिश कर दो ♥</button>
+    <div id="secret"><div class="divider"></div><h2 style="color:#ffb0c8">Omii, तुम्हारा मैसेज मेरे चेहरे पर मुस्कान ले आता है, तुम्हारा साथ सुकून देता है और तुम्हारा ख्याल मेरे दिन को खूबसूरत बनाता है। जन्मदिन मुबारक, मेरी जान! 🎂❤️</h2></div>
+  </div>
+</section>
+<footer>सिर्फ़ तुम्हारे लिए, ढेर सारे प्यार के साथ · 8 नवंबर ❤️</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modalbox"><div class="big" id="modalIcon">💗</div><h2 id="modalTitle">A little message</h2><p id="modalText"></p><button class="btn" onclick="closeModal()">Keep this in my heart ❤️</button></div>
+</div>
+
+<audio id="bgMusic" loop></audio>
+<script>
+const messages=[
+ {icon:"💗",title:"मेरी तरफ़ से एक बात",text:"अगर मैं किसी एक पल को हमेशा के लिए रोक पाता, तो वो पल होता जब तुम मुस्कुरा रही होतीं। तुम्हारी वजह से साधारण दिन भी खास बन जाते हैं।"},
+ {icon:"🤞",title:"तुमसे एक वादा",text:"मैं तुम्हारे सपनों के लिए हमेशा तुम्हें हौसला देने, तुम्हारी बात सुनने और तुम्हें याद दिलाने की कोशिश करूँगा कि तुम कितनी खास हो।"},
+ {icon:"📸",title:"एक प्यारी-सी याद",text:"सबसे खूबसूरत यादें हमेशा बड़ी नहीं होतीं। कभी-कभी छोटी-सी बात भी खास बन जाती है, क्योंकि उसमें तुम होती हो।"},
+ {icon:"🤫",title:"मेरे दिल का राज़",text:"मेरा राज़ ये है कि दिन कितना भी व्यस्त हो, तुम्हारा ख्याल आते ही मेरे चेहरे पर अपने आप मुस्कान आ जाती है।"},
+ {icon:"🎂",title:"तुम्हारे लिए दुआ",text:"तुम्हारी ज़िंदगी खुशियों से भरी रहे, तुम्हारे सपने पूरे हों और तुम्हारे पास मुस्कुराने की हज़ार वजहें हों। तुम दुनिया की सारी अच्छी चीज़ों की हकदार हो।"},
+ {icon:"❤️",title:"मेरे दिल की सच्चाई",text:"बहुत कुछ कह सकता हूँ, लेकिन सबसे सच्ची बात बस इतनी है: तुम मेरे लिए बहुत मायने रखती हो, जितना शायद तुम सोच भी नहीं सकतीं।"},
+ {icon:"🌹",title:"एक और बात",text:"तुम्हें परफेक्ट होने की ज़रूरत नहीं है, Omii। तुम जैसी हो, वैसी ही बहुत प्यारी हो। तुम्हारा होना ही मेरे लिए खास है।"},
+ {icon:"💖",title:"I LOVE OMII",text:"सरप्राइज़, मेरी Omii! ❤️ जन्मदिन मुबारक, मेरी जान। तुम आज भी और हमेशा बहुत प्यारी हो!"}
+];
+function showSurprise(i){const m=messages[i];document.getElementById('modalIcon').textContent=m.icon;document.getElementById('modalTitle').textContent=m.title;document.getElementById('modalText').textContent=m.text;document.getElementById('modal').classList.add('show');if(i===7)rainHearts(45)}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function revealName(){const input=document.getElementById('herName');const name=input.value.trim()||'Omii';document.getElementById('nameOutput').textContent=name+', तुम मेरी ज़िंदगी की बहुत प्यारी वजह हो। तुम्हें हर दिन खुशियाँ मिलें। ❤️';document.getElementById('heroName').textContent=name+' ❤️';document.getElementById('letterName').textContent='तुम्हारा Kundan ❤️';rainHearts(20)}
+function openPhoto(button){const img=button.querySelector('img');document.getElementById('modalIcon').innerHTML='';document.getElementById('modalIcon').innerHTML='<img src="'+img.src+'" alt="" style="max-width:100%;max-height:48vh;border-radius:12px;object-fit:contain">';document.getElementById('modalTitle').textContent=button.querySelector('span').textContent;document.getElementById('modalText').textContent='A little moment to keep forever ❤️';document.getElementById('modal').classList.add('show')}
+function rainHearts(count=15){const area=document.getElementById('rain');const icons=['❤️','💗','💕','💖','💘','🌹'];for(let i=0;i<count;i++){const el=document.createElement('span');el.className='fall';el.textContent=icons[Math.floor(Math.random()*icons.length)];el.style.left=Math.random()*100+'%';el.style.fontSize=(14+Math.random()*24)+'px';el.style.animationDuration=(3+Math.random()*4)+'s';el.style.animationDelay=(Math.random()*1.2)+'s';area.appendChild(el);setTimeout(()=>el.remove(),8500)}}
+function finalSurprise(){document.getElementById('secret').style.display='block';rainHearts(65)}
+
+const bgMusic = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+
+bgMusic.src = './music/song.mp3.mp3';
+bgMusic.load();
+
+function toggleMusic() {
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      musicBtn.textContent = '♫ Music: On';
+    }).catch(() => {
+      alert('गाना नहीं चला। music फोल्डर में song.mp3 का नाम चेक करो।');
+    });
+  } else {
+    bgMusic.pause();
+    musicBtn.textContent = '♫ Music: Off';
+  }
+}
+
+setInterval(() => {
+  if (Math.random() > 0.35) rainHearts(1);
+}, 1400);
+
+</script>
+</body>
+</html>
